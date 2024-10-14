@@ -5,7 +5,8 @@ body{
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    padding: 2%
+    padding: 2%;
+    width: 100%;
 }
 h1{
     font-size: 300%;
@@ -22,7 +23,7 @@ h2{
     text-align: center;
 }
 h3{
-    font-size: 150%;
+    font-size: 125%;
     font-family: "Montserrat", "Avenir", "sans-serif";
     font-weight: bold;
     color: #000
@@ -40,48 +41,56 @@ a{
 div li::before{
     content: "❖ "
 }
+strong{
+    font-weight: bold;
+}
+em{
+    font-style: italic;
+}
 /* header styling */
 header{
-    background-color: #575294;
+    background-color: #00274C;
     border-style: solid;
     border-width: 1em;
-    border-color: #575294;
+    border-color: #00274C;
     margin-bottom: 2%
 }
 /* nav styling */
 nav{
-    background-color: #575294;
+    background-color: #00274C;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
 }
 nav ul{
-    background-color: #575294;
+    background-color: #00274C;
     display: grid;
     width: 90%;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     justify-content: space-around;
     gap: 5%;
+    margin: 2%
 }
-nav li{
-    font-size: 200%;
+nav li, nav a{
+    font-size: 150%;
     font-family: "source sans pro", "sans-serif";
-    color: #575294;
+    color: #00274C;
     font-weight: 300;
     text-align: center;
     background-color: #FFFFFF;
     align-content: center;
+    text-decoration: none;
 }
 nav a:active, nav .nav_on, .nav_on a{
     text-decoration: underline;
     color: #FFCB05;
-    background-color: #575294;
+    background-color: #00274C;
 }
 /* footer styling */
 footer{
-    background-color: #575294;
+    background-color: #00274C;
     display: grid;
     grid-template-columns: 20% 80%;
 }
@@ -136,4 +145,150 @@ li.dpss ::before, li.dpss ::after{
 }
 li.emergencyfunds ::before, li.emergencyfunds ::after{
     content: "💵 ";
+}
+/* study spaces grid styling */
+.study_spaces_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 14%
+}
+.study_spaces_grid img{
+    align-content: center;
+}
+.study_spaces_grid :nth-child(1){
+    grid-area: 1/1/2/3;
+    text-align: center;
+    justify-content: center;
+}
+.study_spaces_grid :nth-child(4){
+    grid-area: 3/1/4/3;
+    text-align: center;
+    justify-content: center;
+}
+.study_spaces_grid :nth-child(7){
+    grid-area: 5/1/6/3;
+    text-align: center;
+    justify-content: center;
+}
+/* physical health grid styling */
+.physical_health_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 2%;
+    margin-bottom: 7%;
+    margin-top: 7%
+}
+.physical_health_grid :nth-child(1){
+    grid-area: 1/1/2/3;
+    text-align: center;
+    justify-content: center;
+}
+.physical_health_grid :nth-child(4){
+    grid-area: 3/1/4/3;
+    text-align: center;
+    justify-content: center;
+}
+.physical_health_grid img, .physical_health_grid p{
+    align-content: center
+}
+/* mental health grid styling */
+.mental_health_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4%;
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    align-items: center
+}
+.mental_health_grid h3, .mental_health_grid p{
+    align-content: center;
+    text-align: center;
+}
+/* academic success team grid styling */
+.academic_success_team_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 4%;
+}
+.academic_success_team_grid h3{
+    grid-area: 1/1/2/3;
+    text-align: center;
+    justify-content: center;
+}
+.academic_success_team_grid :nth-child(3){
+    grid-area: 3/1/4/2;
+}
+.academic_success_team_grid :nth-child(5){
+    grid-area: 3/2/4/3;
+}
+.academic_success_team_grid :nth-child(2) p, .academic_success_team_grid :nth-child(4) p{
+    text-align: center
+}
+/* academic header styling */
+.academic_header{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 95;
+    align-items: center;
+    margin: 7%
+}
+.academic_header h2{
+    text-align: center;
+}
+.academic_header img{
+    align-content: center;
+    justify-content: center
+}
+/* additional academic resources styling */
+.academic_resources_grid{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17%;
+}
+.academic_resouces_grid :nth-child(odd){
+    text-align: center;
+    font-size: larger;
+}
+/* restaurants/bars styling */
+.restaurants_bars{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 4%;
+    margin-top: 4%
+}
+.restaurants_bars h3{
+    text-align: center
+}
+/* activities styling */
+.activities{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
+    margin-top: 4%
+}
+.activities_list{
+    grid-area: 2/1/3/4;
+    justify-content: center
+}
+.activities_list h3{
+    text-align: center
 }
