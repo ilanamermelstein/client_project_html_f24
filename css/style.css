@@ -1,6 +1,11 @@
 /* general styling */
 body{
     background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 2%
 }
 h1{
     font-size: 300%;
@@ -13,7 +18,8 @@ h2{
     font-size: 200%;
     font-family: "Montserrat", "Avenir", "sans-serif";
     font-weight: bold;
-    color: #000
+    color: #000;
+    text-align: center;
 }
 h3{
     font-size: 150%;
@@ -27,24 +33,37 @@ p{
     color: #000;
     line-height: 120%
 }
+a{
+    text-decoration: underline;
+    color: #575294
+}
+div li::before{
+    content: "❖ "
+}
 /* header styling */
 header{
     background-color: #575294;
+    border-style: solid;
+    border-width: 1em;
+    border-color: #575294;
+    margin-bottom: 2%
 }
 /* nav styling */
 nav{
     background-color: #575294;
-    width: 100%
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 nav ul{
-    background-color: #FFFFFF;
+    background-color: #575294;
     display: grid;
+    width: 90%;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 5%;
-    border-style: solid;
-    border-color: #575294;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 5%;
 }
 nav li{
     font-size: 200%;
@@ -52,18 +71,35 @@ nav li{
     color: #575294;
     font-weight: 300;
     text-align: center;
+    background-color: #FFFFFF;
+    align-content: center;
 }
-nav a:active{
-
+nav a:active, nav .nav_on, .nav_on a{
+    text-decoration: underline;
+    color: #FFCB05;
+    background-color: #575294;
 }
-
 /* footer styling */
 footer{
-    background-color: #575294
+    background-color: #575294;
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
 footer p{
     color: #FFCB05;
     text-align: center;
+    font-size: 125%;
+    align-content: center;
+}
+footer a{
+    color: #FFCB05;
+    text-align: center;
+    font-size: 100%;
+}
+footer a:active{
+    background-color: #FFFFFF;
+    color: #575294;
+    text-decoration: underline;
 }
 /* skip to main content styling */
 .skip{
@@ -73,4 +109,31 @@ footer p{
 .skip a:focus{
     position: absolute;
     top: 20px
+}
+/* resource list styling */
+ul.resource_list li{
+    text-align: center;
+    font-size: 120%;
+}
+li.groceries a, li.caps a, li.saferide a, li.sapac a, li.dpss a, li.emergencyfunds a{
+    text-decoration: underline;
+    color: #575294;
+}
+li.groceries ::before, li.groceries ::after{
+    content: "🛒 ";
+}
+li.caps ::before, li.caps ::after{
+    content: "🧠 ";
+}
+li.saferide ::before, li.saferide ::after{
+    content: "🚗 ";
+}
+li.sapac ::before, li.sapac ::after{
+    content: "❤️ ";
+}
+li.dpss ::before, li.dpss ::after{
+    content: "🦺 ";
+}
+li.emergencyfunds ::before, li.emergencyfunds ::after{
+    content: "💵 ";
 }
