@@ -38,6 +38,11 @@ a{
     text-decoration: underline;
     color: #575294
 }
+a:focus{
+    border-style: solid;
+    border-color: #D86018;
+    border-width: thick;
+}
 div li::before{
     content: "❖ "
 }
@@ -112,13 +117,20 @@ footer a:active{
     text-decoration: underline;
 }
 /* skip to main content styling */
-.skip{
+.skip a{
     position: absolute;
     top: -40px;
 }
 .skip a:focus{
     position: absolute;
-    top: 20px
+    top: 20px;
+    background-color: #00274C;
+    font-size: 125%;
+    color: #FFCB05;
+    text-decoration: underline;
+    border-style: solid;
+    border-color: #D86018;
+    border-width: thick;
 }
 /* resource list styling */
 ul.resource_list li{
