@@ -37,6 +37,7 @@
         <div>
             <h2>Physical Health</h2>
             <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
+            <br>
             <div class = physical_health_grid>
                 <h3>University Health Service (UHS)</h3>
                 <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
@@ -92,7 +93,13 @@
     </main>
     <footer>
         <img src = "images/UMSI_signature_vertical_informal_solidblue-min.jpg" alt = "UMSI logo">
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <div>
+            <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <p>© Copyrights <span id="year"></span> by Ilana Mermelstein. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
 </body>
 </html>

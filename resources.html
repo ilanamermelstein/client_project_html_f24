@@ -34,7 +34,7 @@
                 <li class = emergencyfunds><a href = "#emergencyfunding">Emergency funds </a></li>
             </ul>
         </section>
-        <img src = "images/UMSI_Fall_2019_03.jpg" alt="The center of campus on a Fall day featuring a tree with leaves changing color and students socializing.">
+        <img class = emerg_img src = "images/UMSI_Fall_2019_03.jpg" alt="The center of campus on a Fall day featuring a tree with leaves changing color and students socializing.">
         <div id="mbcupboard">
             <h2><a href = "https://mbc.studentlife.umich.edu/">Maize and Blue Cupboard</a></h2>
             <div class = two_col>
@@ -53,7 +53,7 @@
 <!-- Content from Maize and Blue Cupboard website -->
 
         </div>
-        <img src = "images/MCOMMONS_4B3A6781-min.jpg" alt = "Three smiling students petting a brown, fluffy dog.">
+        <img class = emerg_img src = "images/MCOMMONS_4B3A6781-min.jpg" alt = "Three smiling students petting a brown, fluffy dog.">
         <div id="caps">
             <h2><a href = "https://caps.umich.edu/">Counseling and Psychological Services</a></h2>
             <div class = two_col>
@@ -110,7 +110,7 @@
 <!-- Content from Dean of Students website, Late Night Transportation page -->
 
         </div>
-        <img src = "images/UMSI_MichiganUnion_Reopening_18-min.jpg" alt = "The exterior of the Michigan Union on a Winter day. The 'Michigan Union' sign is prominent.">
+        <img class = emerg_img src = "images/UMSI_MichiganUnion_Reopening_18-min.jpg" alt = "The exterior of the Michigan Union on a Winter day. The 'Michigan Union' sign is prominent.">
         <div id="sapac">
             <h2><a href = "https://sapac.umich.edu/">Sexual Assault Prevention and Awareness Center</a></h2>
             <div class = two_col>
@@ -183,8 +183,14 @@
     </main>
     <footer>
         <img src = "images/UMSI_signature_vertical_informal_solidblue-min.jpg" alt = "UMSI logo">
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <div>
+            <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <p>© Copyrights <span id="year"></span> by Ilana Mermelstein. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
 </body>
 
 </html>

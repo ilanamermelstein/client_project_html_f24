@@ -26,7 +26,7 @@
  <!-- Content from UMSI Advising Website -->
         <div>
             <h2>Overview</h2>
-            <img src = "images/UMSI_SpringCampus_04122022_007-min.jpg" alt = "A student studies outside in the North Quad courtyard" width = 100%>
+            <img id = courtyard src = "images/UMSI_SpringCampus_04122022_007-min.jpg" alt = "A student studies outside in the North Quad courtyard" width = 100%>
             <p>The University of Michigan School of Information (UMSI) is committed to providing students with resources to succeed academically and beyond. On this page, we will cover resources and suggestions to achieve academic success at UMSI.</p>
         </div>
         <div>
@@ -66,7 +66,8 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class = tutoring_advising>
+        <div class = tutoring>
             <div class = academic_header>
                 <img src="images/UMSI_MHIClassroom_02202023_18-min.JPG" alt = "Two students, a man and a woman, sit together looking at a laptop screen in a classroom" width = 100%>
                 <h2><a href = "https://sites.google.com/umich.edu/umsitutoring/home?authuser=0Tutoring">Tutoring</a></h2>
@@ -104,11 +105,78 @@
                 <h3 class = directory><a href = "https://docs.google.com/spreadsheets/d/11CtKRblVZq3kcsD9Jp99g9GoMChfesv0JnbgZX31cZQ/edit?usp=sharing">Peer-to-Peer Student Tutor Directory</a></h3>
                 </div>
             </div>
-        </div>
+            <form class = tutor_form action="https://formspree.io/f/manyeolo" method="POST">
+                <fieldset>
+                    <legend><h2>Peer Tutoring Interest Form</h2></legend>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first name" placeholder = "Enter Your First Name Here" tabindex="0" required>
+                    <br>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text"  name="last-name" id = "last-name" placeholder = "Enter Your Last Name Here" tabindex="0" required>
+                    <br>
+                    <label for="uniqname"> Uniqname:</label>
+                    <input type="text" id="uniqname" name="uniqname" placeholder = "Enter Your Uniqname Here" tabindex="0">
+                    <br>
+                    <div class="dropdown">
+                        <label for = "degree-program">Select Your Degree Program from the Dropdown Menu:</label>
+                        <select name="degree-program" id = "degree-program" tabindex="0">
+                            <option value="msi-ux" tabindex="0">MSI: UX Track</option>
+                            <option value="msi-ds" tabindex="0">MSI: Big Data Track</option>
+                            <option value="msi-lakes" tabindex="0">MSI: LAKES Track</option>
+                            <option value="msi-ucag" tabindex="0">MSI: User-Centered Agile Development Track</option>
+                            <option value="mhi" tabindex="0">MHI</option>
+                            <option value="mads" tabindex="0">MADS</option>
+                          </select>
+                    </div>
+                    <br>
+                    <div class = "radio">
+                        <p>For which course/content are you looking to engage with a peer tutor?</p>
+        
+                        <label for="si506">SI 506</label>
+                        <input type="radio" id="si506" name="course" value="si506" tabindex="0">
+                        <br>
+        
+                        <label for="si507">SI 507</label>
+                        <input type="radio" id="si507" name="course" value="si507" tabindex="0">
+                        <br>
+        
+                        <label for="gen-python">General Python Support</label>
+                        <input type="radio" id="gen-python" name="course" value="gen-python" tabindex="0">
+                        <br>
+        
+                        <label for="lin-alg">Linear Algebra</label>
+                        <input type="radio" id="lin-alg" name="course" value="lin-alg" tabindex="0">
+                        <br>
+        
+                        <label for="stats">Statistics</label>
+                        <input type="radio" id="stats" name="course" value="stats" tabindex="0">
+                        <br>
+        
+                        <label for="gen-math">General Math Support</label>
+                        <input type="radio" id="gen-math" name="course" value="gen-math" tabindex="0">
+                    </div>
+        
+                    <br>
+        
+                    <label for = "tutoring-start">When would you like to begin working with a tutor?</label>
+                    <input type="date" name="tutoring-start" id = "tutoring-start" tabindex="0">
+        
+                    <br><br>
+        
+                    <label for = "other-info">Is there anything else you'd like us to know?</label>
+                    <textarea name="other-info" id = "other-info" placeholder="Type any additional comments here" width = 60% height = 30% tabindex="0"></textarea>
+        
+                    <input type="submit" name = "submit" value="Submit" tabindex="0">
+                </fieldset>
+            </form>
         <br>
-        <div>
+        </div>
+        <div class = advising>
             <!-- Content from Academic Advising website -->
-            <h2>Academic Advising</h2>
+            <div class = academic_header>
+                <img src="images/UMSI_Diag_Fall2020_003-min.jpg" alt = "The diag on a fall day, students sit on the grass, and a tree has red leaves." width = 100%>
+                <h2>Academic Advising</h2>
+            </div>
             <p>Academic Advising is a process where students envision, execute, and reflect on their academic plans with guidance from a qualified UMSI Academic Advisor. Students share their goals, challenges, and questions with their academic advisor, and their academic advisor contributes knowledge of university and program requirements, policies, and processes. Together, the two parties develop an academic plan that aligns with the student's personal and professional goals. </p>
             <br>
             <p><strong>How can academic advising help you?</strong></p>
@@ -139,6 +207,7 @@
                 <li><strong>Email Address:</strong> umsi.advising.mads@umich.edu</li>
             </ul>
         </div>
+    </div>
         <div>
             <!-- Content from UMSI Peer Tutoring Website -->
             <div class = academic_header>
@@ -161,8 +230,14 @@
     </main>
     <footer>
         <img src = "images/UMSI_signature_vertical_informal_solidblue-min.jpg" alt = "UMSI logo">
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <div>
+            <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <p>© Copyrights <span id="year"></span> by Ilana Mermelstein. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
 </body>
 
 </html>
