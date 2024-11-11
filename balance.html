@@ -30,7 +30,7 @@
         <div>
             <h2>Study Spaces</h2>
             <p>The first part of a healthy school/life balance is, of course, <em>school</em>! By utilizing the many study spaces on campus to get your graduate work done, you can more easily separate your academic life from your personal life, making it easier to achieve a healthy school/life balance. Some of our favorite study spots for graduate students include:</p>
-            <br>
+            <br><br>
             <div class = study_spaces_grid>
                 <h3><a class = hatcher href = "https://www.lib.umich.edu/locations-and-hours/hatcher-library/"><strong>The Hatcher Graduate Library</strong></a></h3>
                 <p>The study carrels on the third, fourth, and fifth floors offer private, quiet studying opportunities. Additionally, the reading room on the second floor has beautiful architecture and serves as another quiet study space.</p>
@@ -118,8 +118,14 @@
     </main>
     <footer>
         <img src = "images/UMSI_signature_vertical_informal_solidblue-min.jpg" alt = "UMSI logo">
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <div>
+            <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <p>© Copyrights <span id="year"></span> by Ilana Mermelstein. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
 </body>
 
 </html>
